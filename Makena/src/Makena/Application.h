@@ -10,6 +10,10 @@ namespace Makena
 		virtual ~Application();
 
 		void Run();
+		
 	};
+
+	// To be defined in some client...
+	Application* CreateApplication();
 }
 

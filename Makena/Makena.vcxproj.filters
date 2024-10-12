@@ -24,6 +24,9 @@
     <ClInclude Include="src\Makena.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Makena\EntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Makena\Application.cpp">
