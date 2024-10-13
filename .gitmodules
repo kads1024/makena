@@ -1,0 +1,3 @@
+[submodule "Makena/vendor/spdlog"]
+	path = Makena/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
