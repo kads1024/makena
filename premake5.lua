@@ -11,6 +11,12 @@ workspace "Makena"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 	
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Makena/vendor/glfw/include"
+
+include "Makena/vendor/glfw"
+	
 project "Makena"
 	location "Makena"
 	kind "SharedLib"
@@ -31,7 +37,14 @@ project "Makena"
 	includedirs 
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"	
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"
