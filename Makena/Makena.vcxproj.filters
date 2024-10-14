@@ -7,6 +7,12 @@
     <Filter Include="Makena\Events">
       <UniqueIdentifier>{767A928C-E23A-0EC3-AB75-574017F5529F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Makena.h" />
@@ -31,25 +37,39 @@
     <ClInclude Include="src\Makena\Events\MouseEvent.h">
       <Filter>Makena\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Makena\Layer.h">
+      <Filter>Makena</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Makena\LayerStack.h">
+      <Filter>Makena</Filter>
+    </ClInclude>
     <ClInclude Include="src\Makena\Log.h">
       <Filter>Makena</Filter>
     </ClInclude>
+    <ClInclude Include="src\Makena\Window.h">
+      <Filter>Makena</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\mknpch.h" />
-    <ClInclude Include="src\Makena\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\Makena\Layer.h" />
-    <ClInclude Include="src\Makena\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Makena\Application.cpp">
       <Filter>Makena</Filter>
     </ClCompile>
+    <ClCompile Include="src\Makena\Layer.cpp">
+      <Filter>Makena</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Makena\LayerStack.cpp">
+      <Filter>Makena</Filter>
+    </ClCompile>
     <ClCompile Include="src\Makena\Log.cpp">
       <Filter>Makena</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\mknpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Makena\Layer.cpp" />
-    <ClCompile Include="src\Makena\LayerStack.cpp" />
   </ItemGroup>
 </Project>
