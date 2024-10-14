@@ -8,3 +8,5 @@
 #else
 	#error SA WINDOWS LANG PWEDE GAMITIN ANG MAKENA!
 #endif // MKN_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

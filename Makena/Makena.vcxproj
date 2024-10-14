@@ -11,6 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Makena\Events\Event.h" />
+    <ClInclude Include="src\Makena\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Makena\Events\KeyEvent.h" />
+    <ClInclude Include="src\Makena\Events\MouseEvent.h" />
     <ClInclude Include="src\Makena\Log.h" />
     <ClInclude Include="src\Makena.h" />
     <ClInclude Include="src\Makena\Application.h" />
