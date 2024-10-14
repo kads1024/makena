@@ -34,6 +34,7 @@
     <ClInclude Include="src\Makena\Log.h">
       <Filter>Makena</Filter>
     </ClInclude>
+    <ClInclude Include="src\mknpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Makena\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Makena\Log.cpp">
       <Filter>Makena</Filter>
     </ClCompile>
+    <ClCompile Include="src\mknpch.cpp" />
   </ItemGroup>
 </Project>

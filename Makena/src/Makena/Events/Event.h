@@ -2,9 +2,6 @@
 
 #include "Makena/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Makena
 {
 	/// Events in Makena are currently blocking, meaning when an event occurs it
