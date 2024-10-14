@@ -16,7 +16,14 @@ namespace Makena
 	void Application::Run()
 	{
 		WindowResizeEvent e(1280, 720);
-		MKN_TRACE(e.ToString());
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			MKN_TRACE(e.ToString());
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			MKN_TRACE(e.ToString());
+		}
 
 		while (true);
 	}
