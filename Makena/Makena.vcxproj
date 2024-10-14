@@ -152,6 +152,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Makena\LayerStack.h" />
+    <ClInclude Include="src\Makena\Layer.h" />
     <ClInclude Include="src\Makena.h" />
     <ClInclude Include="src\Makena\Application.h" />
     <ClInclude Include="src\Makena\Core.h" />
@@ -166,6 +168,8 @@
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Makena\LayerStack.cpp" />
+    <ClCompile Include="src\Makena\Layer.cpp" />
     <ClCompile Include="src\Makena\Application.cpp" />
     <ClCompile Include="src\Makena\Log.cpp" />
     <ClCompile Include="src\mknpch.cpp">

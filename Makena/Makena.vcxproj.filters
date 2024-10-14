@@ -37,6 +37,8 @@
     <ClInclude Include="src\mknpch.h" />
     <ClInclude Include="src\Makena\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Makena\Layer.h" />
+    <ClInclude Include="src\Makena\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Makena\Application.cpp">
@@ -47,5 +49,7 @@
     </ClCompile>
     <ClCompile Include="src\mknpch.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Makena\Layer.cpp" />
+    <ClCompile Include="src\Makena\LayerStack.cpp" />
   </ItemGroup>
 </Project>
