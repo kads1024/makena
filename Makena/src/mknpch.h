@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Makena/Log.h"
+
 #ifdef MKN_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif // MKN_PLATFORM_WINDOWS

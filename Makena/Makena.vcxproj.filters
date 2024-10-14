@@ -35,6 +35,8 @@
       <Filter>Makena</Filter>
     </ClInclude>
     <ClInclude Include="src\mknpch.h" />
+    <ClInclude Include="src\Makena\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Makena\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Makena</Filter>
     </ClCompile>
     <ClCompile Include="src\mknpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
