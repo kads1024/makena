@@ -1,8 +1,6 @@
 #pragma once
 #include "Event.h"
 
-#include <sstream>
-
 namespace Makena
 {
 	class MAKENA_API WindowResizeEvent : public Event

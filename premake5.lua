@@ -19,6 +19,9 @@ project "Makena"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+	pchheader "mknpch.h"
+	pchsource "Makena/src/mknpch.cpp"
+
 	files 
 	{
 		"%{prj.name}/src/**.h",

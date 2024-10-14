@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Makena
 {
 	class MAKENA_API KeyEvent : public Event
