@@ -1,7 +1,7 @@
 #include "Application.h"
 
-#include "Events/ApplicationEvent.h"
-#include "Log.h"
+#include "Makena/Events/ApplicationEvent.h"
+#include "Makena/Log.h"
 
 namespace Makena
 {
@@ -16,7 +16,7 @@ namespace Makena
 	void Application::Run()
 	{
 		WindowResizeEvent e(1280, 720);
-		MKN_TRACE(e);
+		MKN_TRACE(e.ToString());
 
 		while (true);
 	}

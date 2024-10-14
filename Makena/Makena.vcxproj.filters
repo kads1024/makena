@@ -4,6 +4,9 @@
     <Filter Include="Makena">
       <UniqueIdentifier>{D2EE93C2-BE90-BE98-A74B-D2EC938C45E9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Makena\Events">
+      <UniqueIdentifier>{767A928C-E23A-0EC3-AB75-574017F5529F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Makena.h" />
@@ -16,20 +19,20 @@
     <ClInclude Include="src\Makena\EntryPoint.h">
       <Filter>Makena</Filter>
     </ClInclude>
-    <ClInclude Include="src\Makena\Log.h">
-      <Filter>Makena</Filter>
+    <ClInclude Include="src\Makena\Events\ApplicationEvent.h">
+      <Filter>Makena\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Makena\Events\Event.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Makena\Events\ApplicationEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Makena\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Makena\Events\KeyEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Makena\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Makena\Events\MouseEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Makena\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Makena\Log.h">
+      <Filter>Makena</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
