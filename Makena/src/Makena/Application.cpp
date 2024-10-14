@@ -4,10 +4,13 @@
 #include "Makena/Events/ApplicationEvent.h"
 #include "Makena/Log.h"
 
+#include "GLFW/glfw3.h"
+
 namespace Makena
 {
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -16,16 +19,12 @@ namespace Makena
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			MKN_TRACE(e.ToString());
-		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			MKN_TRACE(e.ToString());
-		}
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
 
-		while (true);
+			m_Window->OnUpdate();
+		}
 	}
 }
