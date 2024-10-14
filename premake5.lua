@@ -14,9 +14,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Makena/vendor/glfw/include"
+IncludeDir["Glad"] = "Makena/vendor/Glad/include"
+IncludeDir["ImGui"] = "Makena/vendor/imgui"
 
 include "Makena/vendor/glfw"
-	
+include "Makena/vendor/Glad"
+include "Makena/vendor/imgui"
+
 project "Makena"
 	location "Makena"
 	kind "SharedLib"
@@ -38,13 +42,17 @@ project "Makena"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 	
 	links
 	{
 		"GLFW",
-		"opengl32.lib"
+		"Glad",
+		"opengl32.lib",
+		"ImGui"
 	}
 	
 	filter "system:windows"
@@ -55,7 +63,8 @@ project "Makena"
 		defines
 		{
 			"MKN_PLATFORM_WINDOWS",
-			"MKN_BUILD_DLL"
+			"MKN_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		postbuildcommands 

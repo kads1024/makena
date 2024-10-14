@@ -6,6 +6,8 @@
 #include "Makena/Layer.h"
 #include "Makena/Log.h"
 
+#include "Makena/ImGui/ImGuiLayer.h"
+
 //---Entry Point------------------------
 #include "Makena/EntryPoint.h"
 //--------------------------------------
