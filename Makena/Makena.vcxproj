@@ -161,11 +161,13 @@
     <ClInclude Include="src\Makena\Events\KeyEvent.h" />
     <ClInclude Include="src\Makena\Events\MouseEvent.h" />
     <ClInclude Include="src\Makena\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Makena\Input.h" />
     <ClInclude Include="src\Makena\Layer.h" />
     <ClInclude Include="src\Makena\LayerStack.h" />
     <ClInclude Include="src\Makena\Log.h" />
     <ClInclude Include="src\Makena\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mknpch.h" />
   </ItemGroup>
@@ -176,6 +178,7 @@
     <ClCompile Include="src\Makena\LayerStack.cpp" />
     <ClCompile Include="src\Makena\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mknpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
