@@ -162,9 +162,11 @@
     <ClInclude Include="src\Makena\Events\MouseEvent.h" />
     <ClInclude Include="src\Makena\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Makena\Input.h" />
+    <ClInclude Include="src\Makena\KeyCodes.h" />
     <ClInclude Include="src\Makena\Layer.h" />
     <ClInclude Include="src\Makena\LayerStack.h" />
     <ClInclude Include="src\Makena\Log.h" />
+    <ClInclude Include="src\Makena\MouseButtonCodes.h" />
     <ClInclude Include="src\Makena\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
