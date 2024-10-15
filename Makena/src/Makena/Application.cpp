@@ -44,7 +44,7 @@ namespace Makena
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
-		MKN_CORE_TRACE(e.ToString());
+		// MKN_CORE_TRACE(e.ToString());
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
@@ -66,8 +66,7 @@ namespace Makena
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
 
-			auto [x, y] = Input::GetMousePosition();
-			MKN_CORE_TRACE("{0}, {1}", x, y);
+			
 
 			m_Window->OnUpdate();
 		}
