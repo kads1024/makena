@@ -7,3 +7,6 @@
 [submodule "Makena/vendor/imgui"]
 	path = Makena/vendor/imgui
 	url = git@github.com:TheCherno/imgui.git
+[submodule "Makena/vendor/glm"]
+	path = Makena/vendor/glm
+	url = git@github.com:g-truc/glm.git
