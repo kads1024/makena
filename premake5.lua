@@ -17,9 +17,11 @@ IncludeDir["GLFW"] = "Makena/vendor/glfw/include"
 IncludeDir["Glad"] = "Makena/vendor/Glad/include"
 IncludeDir["ImGui"] = "Makena/vendor/imgui"
 
-include "Makena/vendor/glfw"
-include "Makena/vendor/Glad"
-include "Makena/vendor/imgui"
+group "Dependencies"
+	include "Makena/vendor/glfw"
+	include "Makena/vendor/Glad"
+	include "Makena/vendor/imgui"
+group ""
 
 project "Makena"
 	location "Makena"
@@ -69,7 +71,7 @@ project "Makena"
 		
 		postbuildcommands 
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 	
 	filter "configurations:Debug"
