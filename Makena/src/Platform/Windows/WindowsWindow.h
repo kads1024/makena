@@ -21,6 +21,9 @@ namespace Makena
 
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
+
+		inline virtual void* GetNativeWindow() const { return m_Window;  }
+
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();

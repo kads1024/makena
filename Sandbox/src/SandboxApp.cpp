@@ -6,17 +6,27 @@ public:
 	ExampleLayer()
 		: Layer("Example")
 	{
-
+		
 	}
 
 	void OnUpdate() override
 	{
-		MKN_INFO("ExampleLayer::Update");
+		// MKN_INFO("ExampleLayer::Update");
+
+		if (Makena::Input::IsKeyPressed(MKN_KEY_TAB))
+			MKN_TRACE("Tab Key is pressed (poll)!");
 	}
 	
 	void OnEvent(Makena::Event& event) override
 	{
-		MKN_TRACE(event.ToString());
+		if (event.GetEventType() == Makena::EventType::KeyPressed)
+		{
+			Makena::KeyPressedEvent& e = (Makena::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == MKN_KEY_TAB)
+				MKN_TRACE("Tab key is pressed (event)!");
+			
+			MKN_TRACE((char)e.GetKeyCode());
+		}
 	}
 };
 
@@ -26,7 +36,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Makena::ImGuiLayer());
 	}
 	~Sandbox()
 	{

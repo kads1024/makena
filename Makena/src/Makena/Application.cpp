@@ -5,6 +5,8 @@
 
 #include <glad/glad.h>
 
+#include "Input.h"
+
 namespace Makena
 {
 
@@ -19,6 +21,9 @@ namespace Makena
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+
+		m_ImGuiLayer = new ImGuiLayer();
+		PushOverlay(m_ImGuiLayer);
 	}
 
 	Application::~Application()
@@ -42,7 +47,7 @@ namespace Makena
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
-		MKN_CORE_TRACE(e.ToString());
+		// MKN_CORE_TRACE(e.ToString());
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
@@ -61,8 +66,10 @@ namespace Makena
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
 
+			m_ImGuiLayer->Begin();
 			for (Layer* layer : m_LayerStack)
-				layer->OnUpdate();
+				layer->OnImGuiRender();
+			m_ImGuiLayer->End();
 
 			m_Window->OnUpdate();
 		}

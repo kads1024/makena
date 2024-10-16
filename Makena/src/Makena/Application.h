@@ -7,7 +7,7 @@
 #include "Makena/Events/Event.h"
 #include "Makena/Events/ApplicationEvent.h"
 
-
+#include "Makena/ImGui/ImGuiLayer.h"
 
 namespace Makena
 {
@@ -30,6 +30,7 @@ namespace Makena
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:
