@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Makena
 {
 	class MAKENA_API KeyEvent : public Event
@@ -54,5 +52,21 @@ namespace Makena
 		}
 
 		EVENT_CLASS_TYPE(KeyReleased)
+	};
+
+	class MAKENA_API KeyTypedEvent : public KeyEvent
+	{
+	public:
+		KeyTypedEvent(int keycode)
+			: KeyEvent(keycode) {}
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "KeyTypedEvent: " << m_KeyCode;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(KeyTyped)
 	};
 }
