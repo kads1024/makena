@@ -1,5 +1,5 @@
 #include <Makena.h>
-
+#include "imgui/imgui.h"
 class ExampleLayer : public Makena::Layer
 {
 public:
@@ -17,6 +17,14 @@ public:
 			MKN_TRACE("Tab Key is pressed (poll)!");
 	}
 	
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+	}
+
+
 	void OnEvent(Makena::Event& event) override
 	{
 		if (event.GetEventType() == Makena::EventType::KeyPressed)
